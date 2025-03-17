@@ -28,7 +28,7 @@ function actualizarAmigos() {
         elementoLista.textContent = names[i];
         list.appendChild(elementoLista);
     }
-
+    return;
 }
 
 function sortearAmigo() {
@@ -40,4 +40,5 @@ function sortearAmigo() {
     }
     else
         alert("No hay nombres.")
+    return;
 }
