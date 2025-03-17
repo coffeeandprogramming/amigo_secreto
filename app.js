@@ -12,10 +12,22 @@ function agregarAmigo() {
         names.push(name);
         limpiarCaja();
         console.log(names);
+        actualizarAmigos();
     }
     else {
         alert("Ingresaste un nombre vacio. Intentalo nuevamente.");
     }
     return;
+}
+
+function actualizarAmigos() {
+    let list = document.getElementById('listaAmigos');
+    list.innerHTML = "";
+    for (let i = 0; i < names.length; i++) {
+        let elementoLista = document.createElement("li");
+        elementoLista.textContent = names[i];
+        list.appendChild(elementoLista);
+    }
+
 
 }
