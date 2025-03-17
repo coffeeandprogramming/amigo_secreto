@@ -8,7 +8,7 @@ function limpiarCaja() {
 
 function agregarAmigo() {
     let name = document.getElementById("amigo").value;
-    if (name != " ") {
+    if (name != "") {
         names.push(name);
         limpiarCaja();
         console.log(names);
@@ -29,5 +29,15 @@ function actualizarAmigos() {
         list.appendChild(elementoLista);
     }
 
+}
 
+function sortearAmigo() {
+    if (names.length > 0) {
+        let i = Math.floor(Math.random() * names.length);
+        console.log(i);
+        let sorteado = document.getElementById("resultado");
+        sorteado.innerHTML = names[i];
+    }
+    else
+        alert("No hay nombres.")
 }
